@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive JavaScript Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Event Playground</h1>
+    </header>
+
+    <main>
+      <!-- Button Click Section -->
+      <section class="card">
+        <h2>Button Click Magic</h2>
+        <p id="click-text">Click the button to change me!</p>
+        <button id="click-btn" class="btn">Change Text</button>
+      </section>
+
+      <!-- Hover Effects Section -->
+      <section class="card">
+        <h2>Hover Effects</h2>
+        <div id="hover-box" class="interactive-box">Hover over me!</div>
+      </section>
+
+      <!-- Keypress Detection -->
+      <section class="card">
+        <h2>Keypress Logger</h2>
+        <p>Type in the box below:</p>
+        <input type="text" id="keypress-input" placeholder="Start typing..." />
+        <p id="keypress-output">Last key pressed:</p>
+      </section>
+
+      <!-- Secret Action -->
+      <section class="card">
+        <h2>Find the Secret!</h2>
+        <div id="secret-box" class="interactive-box">
+          Double click me for a surprise!
+        </div>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="card">
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+          <img src="pic1.jpeg" alt="Nature" class="gallery-img active" />
+          <img src="pic2.jpeg" alt="City" class="gallery-img" />
+          <img src="pic3.jpeg" alt="Animal" class="gallery-img" />
+        </div>
+        <div class="gallery-controls">
+          <button id="prev-btn" class="btn">Previous</button>
+          <button id="next-btn" class="btn">Next</button>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+      <section class="card">
+        <h2>FAQ Accordion</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              What is JavaScript? <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                JavaScript is a programming language that makes web pages
+                interactive.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Why use events? <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Events allow users to interact with your webpage through clicks,
+                hovers, and more.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              How do I learn more? <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Practice building projects like this one and explore
+                documentation!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Validation -->
+      <section class="card">
+        <h2>Sign Up Form</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+            <div class="error-message" id="name-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <div class="error-message" id="email-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required minlength="8" />
+            <div class="error-message" id="password-error"></div>
+            <div class="password-rules">
+              <p>Password must contain:</p>
+              <ul>
+                <li id="length-rule">At least 8 characters</li>
+                <li id="number-rule">At least 1 number</li>
+                <li id="special-rule">At least 1 special character</li>
+              </ul>
+            </div>
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <div id="form-success" class="success-message"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>JavaScript Event Assignment &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
